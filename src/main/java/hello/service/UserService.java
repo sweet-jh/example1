@@ -17,4 +17,14 @@ public class UserService {
     public User getOne(Long id) {
         return userDao.findOne(id);
     }
+
+    public void createItem() {
+        User user = new User();
+        user.setName("Niu Wanlu");
+        userDao.save(user);
+    }
+
+    public void deleteItem(Long id) {
+        userDao.delete(id);
+    }
 }

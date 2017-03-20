@@ -20,4 +20,14 @@ public class UserController {
     public User getOneItem(long id) {
         return userService.getOne(id);
     }
+
+    @RequestMapping(value = "/create")
+    public void createOneItem() {
+        userService.createItem();
+    }
+
+    @RequestMapping(value = "/delete")
+    public void deleteItem(long id) {
+        userService.deleteItem(id);
+    }
 } // class UserController
